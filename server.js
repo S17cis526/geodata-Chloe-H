@@ -13,6 +13,21 @@ server.listen(PORT, function() {
     console.log("Listening on port", PORT);
 });
 
+function addLocation(req, res) {
+    var url = require('url').parse(req.url);
+    var qs = require('qs').parse(url.query);
+    var address = qs.address;
+    // Perform geolocation with address
+    http.get(
+        'http://www.datasciencetoolkit.org/maps/api/geocode/json?sensor=false&address=' + address,
+        function(err) {
+            if (err) {
+                // redirect back to index
+            }
+        }
+    )
+}
+
 /** @function serveFile
  * Serves a static file resource
  * @param {string} file - the path to the file
@@ -39,7 +54,9 @@ function serveFile(file, type, req, res) {
  * @param {http.serverResponse} res - the response object
  */
 function handleRequest(req, res) {
-    switch (req.url) {
+    var url = require('url').parse(req.url);
+
+    switch (url.pathname) {
         // Serving static files
         case '/':
         case '/index.html':
@@ -61,6 +78,7 @@ function handleRequest(req, res) {
         case '/united-states.json':
             serveFile('data/united-states.json', 'application/json', req, res);
             break;
+        case
         // Serve error code
         default:
             res.statusCode = 404;
