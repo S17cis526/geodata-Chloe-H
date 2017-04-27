@@ -1,26 +1,26 @@
 {
-  "name": "simple-chart",
-  "version": "1.0.0",
-  "description": "A simple example of working with geodata and d3",
-  "main": "server.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zombiepaladin/simple-geodata.git"
-  },
-  "keywords": [
-    "Node",
-    "HTML5",
-    "d3",
-    "geodata"
-  ],
-  "author": "Nathan H. Bean",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/zombiepaladin/simple-geodata/issues"
-  },
-  "homepage": "https://github.com/zombiepaladin/simple-geodata#readme"
+    "name": "simple-chart",
+    "version": "1.0.0",
+    "description": "A simple example of working with geodata and d3",
+    "main": "server.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/zombiepaladin/simple-geodata.git"
+    },
+    "keywords": [
+        "Node",
+        "HTML5",
+        "d3",
+        "geodata"
+    ],
+    "author": "Nathan H. Bean",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/zombiepaladin/simple-geodata/issues"
+    },
+    "homepage": "https://github.com/zombiepaladin/simple-geodata#readme"
 }
