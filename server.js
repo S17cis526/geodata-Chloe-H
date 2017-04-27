@@ -54,16 +54,14 @@ function handleRequest(req, res) {
         case '/pin.png':
             serveFile('public/pin.png', 'image/png', req, res);
             break;
-
-            // Serve geodata
+        // Serve geodata
         case '/locations.json':
             serveFile('data/locations.json', 'application/json', req, res);
             break;
         case '/united-states.json':
             serveFile('data/united-states.json', 'application/json', req, res);
             break;
-
-            // Serve error code
+        // Serve error code
         default:
             res.statusCode = 404;
             res.end("Not found");
